@@ -1,0 +1,343 @@
+/* Fonts */
+@import url(C:\Users\Simon\Desktop\Contain_Drops\assets\fonts\Bakbak_One\BakbakOne-Regular.ttf);
+
+/* Variables */
+:root {
+    --c-brand: #1e4091;
+    --c-brand-light: #E2E2E2;
+    --c-register: #48A9A6;  /* Register Your Property */
+    --c-evaluation: #D4B483;  /* Site Evaluation */
+    --c-hosting: #C1666B;  /* Start Hosting */
+    --c-income: #4357AD;  /* Earn Monthly Income */
+}
+/* General Styles */
+body {
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600;
+}
+
+/* Typography */
+.bakbak-one-regular {
+    font-family: "Bakbak One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--c-brand);
+    width: 100%;
+}
+
+/* Centrado Vertical de todos los elementos */
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Asegura que el contenido esté centrado verticalmente */
+}
+
+/* Título y logo */
+.navbar-brand.title {
+    font-family: "Bakbak One", sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    color: var(--c-brand-light);
+    font-style: italic;
+    letter-spacing: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand img {
+    height: 94px;
+    width: 80px;
+    margin-right: 10px;
+    top: calc(50% - 47px);
+}
+
+.navbar-toggler{
+        position: absolute;
+        right: 5%;
+        height: 40px;
+        top: calc(50% - 20px);
+}
+
+/* Estilo de los enlaces de navegación */
+.navbar-nav a {
+    color: var(--c-brand-light);
+    font-family: "Bakbak One", sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 10px;
+    margin-right: 4vh;
+}
+/* Hero Section */
+#hero {
+    background: linear-gradient(hsla(0, 0%, 0%, 0.582), hsla(250, 96%, 18%, 0.226)), url(/assets/images/bg4.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    animation: blur 1s;
+}
+
+.hero-title {
+    color: var(--c-brand-light);
+    font-family: "Bakbak One", sans-serif;
+    font-size: 2vh;
+    font-weight: 700;
+    animation: slidein 2s;
+    text-shadow: 0px 2px 20px rgba(0, 0, 0, 0.445);
+    margin-bottom: 20%;
+}
+
+.iconoBajar {
+    color: var(--c-brand-light);
+    font-size: 12vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80%;
+    animation: slideinn 1s infinite alternate;
+}
+
+/* About Section */
+#about {
+    width: 100%;
+    background-color: var(--c-brand-light);
+    padding-bottom: 10vh;
+}
+
+.about-title {
+    color: var(--c-brand);
+    font-family: "Bakbak One", sans-serif;
+    font-size: 2vh;
+    font-weight: 700;
+    margin-bottom: 20%;
+    padding-top: 10vh;
+    text-align: center;
+}
+
+/* Colores personalizados para cada ítem */
+.register .iconos-fondo {
+    background-color: var(--c-register);
+}
+
+.evaluation .iconos-fondo {
+    background-color: var(--c-evaluation);
+}
+
+.hosting .iconos-fondo {
+    background-color: var(--c-hosting);
+}
+
+.income .iconos-fondo {
+    background-color: var(--c-income);
+}
+
+/* Estilo para los iconos */
+.iconos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+
+.iconos .col-3 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.iconos-fondo {
+    position: relative;
+    border-radius: 50%;
+    height: 13vh;
+    width: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.iconos-fondo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #123456;
+    height: 12vh;
+    width: 12vh;
+    z-index: -1;
+}
+
+.iconos-fondo:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.iconos i {
+    font-size: 48px;
+}
+
+.iconos i:hover {
+    animation: wavy 2s infinite ease-in-out;
+}
+
+.item {
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--c-brand-light);
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Borde de los ítems cuando están activos */
+.item.register.active {
+    border-color: var(--c-register);
+}
+
+.item.evaluation.active {
+    border-color: var(--c-evaluation);
+}
+
+.item.hosting.active {
+    border-color: var(--c-hosting);
+}
+
+.item.income.active {
+    border-color: var(--c-income);
+}
+
+/* Estilo cuando el ítem está activo */
+.item.active {
+    background-color: white;
+}
+
+/* Estilo de título debajo del icono */
+.title {
+    display: block;
+    margin-top: 10px;
+    font-size: 2.5vh;
+    font-family: "Bakbak One", sans-serif;
+    color: #333;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Evitar que el círculo se expanda */
+.prop-register, .prop-evaluation, .prop-hosting, .prop-income {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animations */
+@keyframes slideinn {
+    from {
+        transform: translateX(-50%) translateY(0);
+    }
+    to {
+        transform: translateX(-50%) translateY(20px);
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-top: -40%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+
+@keyframes blur {
+    from {
+        filter: blur(5px);
+        padding: 20px 20px;
+    }
+    to {
+        filter: blur(0px);
+        padding: 0px 0px;
+    }
+}
+
+@keyframes wavy {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
+  /*MEDIA QUERIES*/
+
+/* Colapsado */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: var(--c-brand); /* Fondo oscuro cuando se colapsa */
+    }
+
+    .navbar-nav a {
+        font-size: 1.4rem;
+        letter-spacing: 6px;
+    }
+}
+
+/* Pantallas más pequeñas */
+@media (max-width: 768px) {
+    .navbar-brand.title {
+        font-size: 2.5rem;
+        letter-spacing: 6px;
+    }
+
+    .navbar-brand img {
+        height: 60px;
+        width: 50px;
+    }
+
+    .navbar-nav a {
+        font-size: 1.4rem;
+    }
+}
+
+/* Estilo para pantallas aún más pequeñas */
+@media (max-width: 576px) {
+    .navbar-brand.title {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+
+    .navbar-brand img {
+        height: 50px;
+        width: 40px;
+    }
+
+    .navbar-nav a {
+        font-size: 1.2rem;
+    }
+}
